@@ -1,0 +1,20 @@
+[project]
+name = "research-stem-agent"
+version = "0.1.0"
+description = "A constrained stem agent that evolves into a specialized deep research agent by adapting typed architecture config."
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7",
+  "pyyaml>=6.0"
+]
+
+[project.optional-dependencies]
+api = [
+  "openai>=1.0"
+]
+dev = [
+  "pytest>=8.0"
+]
+
+[tool.setuptools.packages.find]
+include = ["research_stem*"]

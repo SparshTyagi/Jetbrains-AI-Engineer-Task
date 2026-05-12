@@ -1,0 +1,22 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+*.egg-info/
+
+# Default local run output. The README is kept as documentation.
+artifacts/**
+!artifacts/
+!artifacts/README.md
+
+# Local secret supplied outside the project implementation.
+provided_openai_api.txt
+
+# Superseded API verification runs; keep artifacts_api_final if submitting API-backed logs.
+artifacts_api/
+artifacts_api_fixed/
