@@ -1,0 +1,45 @@
+{
+  "name": "baseline_generic_researcher",
+  "version": "0.1",
+  "tools": [
+    {
+      "name": "corpus_search",
+      "enabled": true,
+      "retries": 0,
+      "timeout_ms": 3000
+    }
+  ],
+  "memory": {
+    "enabled": false,
+    "source_grounded": false,
+    "max_notes": 0,
+    "decay_policy": "none"
+  },
+  "retrieval": {
+    "strategy": "keyword",
+    "top_k": 2,
+    "source_diversity": false,
+    "max_per_source": 2,
+    "query_expansion": false,
+    "citation_verification": false,
+    "min_score": 0.0
+  },
+  "planner": {
+    "style": "direct",
+    "steps": [
+      "answer_directly"
+    ],
+    "contradiction_check": false,
+    "evidence_first": false
+  },
+  "eval_metrics": [
+    "citation_precision",
+    "evidence_recall",
+    "unsupported_claim_rate",
+    "contradiction_handling",
+    "rubric_score",
+    "tool_failure_recovery"
+  ],
+  "frozen": false,
+  "notes": []
+}
