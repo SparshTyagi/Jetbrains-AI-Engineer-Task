@@ -1,0 +1,77 @@
+{
+  "id": "research_failures_specialist_validation_20260512_145302",
+  "mode": "research_failures_specialist",
+  "config_name": "research_failures_specialist",
+  "split": "validation",
+  "results": [
+    {
+      "task_id": "V1",
+      "mode": "research_failures_specialist",
+      "score": 0.8352,
+      "metrics": {
+        "citation_precision": 0.8571,
+        "evidence_recall": 0.6667,
+        "unsupported_claim_rate": 0.0,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.6667,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 5.55
+      },
+      "expected_evidence_ids": [
+        "E4",
+        "E2",
+        "E3"
+      ],
+      "found_evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "missing_evidence_ids": [
+        "E3"
+      ],
+      "unsupported_claims": 0,
+      "answer": "Research answer for V1:\n- Noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. Source diversity and query expansion improve recall by trading some precision for broader ev... [E4]\n- Source-grounded memory stores compact notes with evidence IDs and source names. It separates scratchpad reasoning from durable research notes, which makes later synthesis easier to audit. [E6]\n- A mutation budget prevents endless architecture search. Invalid candidates should be rejected by schema validation or rolled back after failed validation, not patched silently during a benchmark run. [E10]\n- Unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence ID. A citation is not a decoration; it is a contract that the cited source actually supports the claim. [E2]\n- A practical stem agent can adapt typed architecture configuration rather than rewrite arbitrary code. The runtime remains stable while retrieval depth, memory policy, tools, retries, and planning style chang... [E8]\n- Broken tool calls include malformed arguments, transient timeouts, empty responses, and hidden partial failures. A reliable agent logs every attempt, distinguishes tool failure from no evidence found, and us... [E11]\n- I would still run citation-level evaluation because answer fluency can disagree with evidence support. [E7]\n- Working memory kept only source-grounded notes from: [E4] [E6] [E10] [E2] [E8] [E11].\nConclusion: freeze the architecture only after validation stabilizes, because the useful adaptation is the tested workflow configuration rather than unconstrained autonomy."
+    },
+    {
+      "task_id": "V2",
+      "mode": "research_failures_specialist",
+      "score": 0.7852,
+      "metrics": {
+        "citation_precision": 0.8571,
+        "evidence_recall": 0.6667,
+        "unsupported_claim_rate": 0.0,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.25,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 6.57
+      },
+      "expected_evidence_ids": [
+        "E11",
+        "E10",
+        "E9"
+      ],
+      "found_evidence_ids": [
+        "E10",
+        "E11"
+      ],
+      "missing_evidence_ids": [
+        "E9"
+      ],
+      "unsupported_claims": 0,
+      "answer": "Research answer for V2:\n- Broken tool calls include malformed arguments, transient timeouts, empty responses, and hidden partial failures. A reliable agent logs every attempt, distinguishes tool failure from no evidence found, and us... [E11]\n- Noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. Source diversity and query expansion improve recall by trading some precision for broader ev... [E4]\n- A practical stem agent can adapt typed architecture configuration rather than rewrite arbitrary code. The runtime remains stable while retrieval depth, memory policy, tools, retries, and planning style chang... [E8]\n- A mutation budget prevents endless architecture search. Invalid candidates should be rejected by schema validation or rolled back after failed validation, not patched silently during a benchmark run. [E10]\n- Unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence ID. A citation is not a decoration; it is a contract that the cited source actually supports the claim. [E2]\n- Source-grounded memory stores compact notes with evidence IDs and source names. It separates scratchpad reasoning from durable research notes, which makes later synthesis easier to audit. [E6]\n- I would still run citation-level evaluation because answer fluency can disagree with evidence support. [E7]\n- Working memory kept only source-grounded notes from: [E11] [E4] [E8] [E10] [E2] [E6].\nConclusion: freeze the architecture only after validation stabilizes, because the useful adaptation is the tested workflow configuration rather than unconstrained autonomy."
+    }
+  ],
+  "aggregate_metrics": {
+    "citation_precision": 0.8571,
+    "contradiction_handling": 1.0,
+    "evidence_recall": 0.6667,
+    "latency_ms": 6.06,
+    "rubric_score": 0.4583,
+    "tool_failure_recovery": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "score": 0.8102
+  },
+  "started_at": "2026-05-12T14:53:02.192353+00:00",
+  "completed_at": "2026-05-12T14:53:02.210680+00:00",
+  "trace_path": "artifacts_api_final\\traces\\research_failures_specialist_validation_20260512_145302.jsonl"
+}

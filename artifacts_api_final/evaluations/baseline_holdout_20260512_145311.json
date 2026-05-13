@@ -1,0 +1,135 @@
+{
+  "id": "baseline_holdout_20260512_145311",
+  "mode": "baseline",
+  "config_name": "baseline_generic_researcher",
+  "split": "holdout",
+  "results": [
+    {
+      "task_id": "H1",
+      "mode": "baseline",
+      "score": 0.595,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.25,
+        "unsupported_claim_rate": 0.75,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.5,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 5.58
+      },
+      "expected_evidence_ids": [
+        "E2",
+        "E3",
+        "E4",
+        "E7"
+      ],
+      "found_evidence_ids": [
+        "E2"
+      ],
+      "missing_evidence_ids": [
+        "E3",
+        "E4",
+        "E7"
+      ],
+      "unsupported_claims": 3,
+      "answer": "Answer:\n- Unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence ID. A citation is not a decoration; it is a contract that the cited source actually supports the claim. [E2]\n- It also suggests that noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. source diversity and query expansion improve recall by trading some precision for broader ev...\n- Overall, the agent should keep researching until the answer looks coherent, but this answer does not fully audit evidence coverage."
+    },
+    {
+      "task_id": "H2",
+      "mode": "baseline",
+      "score": 0.5583,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.3333,
+        "unsupported_claim_rate": 0.75,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.0,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 2.36
+      },
+      "expected_evidence_ids": [
+        "E8",
+        "E9",
+        "E10"
+      ],
+      "found_evidence_ids": [
+        "E8"
+      ],
+      "missing_evidence_ids": [
+        "E10",
+        "E9"
+      ],
+      "unsupported_claims": 3,
+      "answer": "Answer:\n- A practical stem agent can adapt typed architecture configuration rather than rewrite arbitrary code. The runtime remains stable while retrieval depth, memory policy, tools, retries, and planning style chang... [E8]\n- It also suggests that strict evidence metrics can underrate an answer that correctly integrates sources but uses a different phrasing than the expected rubric. the evaluation should report this limitation instead of pretending th...\n- Overall, the agent should keep researching until the answer looks coherent, but this answer does not fully audit evidence coverage."
+    },
+    {
+      "task_id": "H3",
+      "mode": "baseline",
+      "score": 0.6383,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.3333,
+        "unsupported_claim_rate": 0.75,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.6667,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 5.79
+      },
+      "expected_evidence_ids": [
+        "E1",
+        "E5",
+        "E6"
+      ],
+      "found_evidence_ids": [
+        "E1"
+      ],
+      "missing_evidence_ids": [
+        "E5",
+        "E6"
+      ],
+      "unsupported_claims": 3,
+      "answer": "Answer:\n- Context drift appears when an agent keeps appending retrieved snippets, tool logs, and draft conclusions into the same prompt. The model attends to stale or high-salience text even when the task has shifted,... [E1]\n- It also suggests that memory degradation happens when an agent stores unfiltered summaries, guesses, and outdated plans. the memory begins to look authoritative even though it no longer represents the best available evidence.\n- Overall, the agent should keep researching until the answer looks coherent, but this answer does not fully audit evidence coverage."
+    },
+    {
+      "task_id": "H4",
+      "mode": "baseline",
+      "score": 0.4983,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.3333,
+        "unsupported_claim_rate": 0.75,
+        "contradiction_handling": 0.0,
+        "rubric_score": 0.6667,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 3.27
+      },
+      "expected_evidence_ids": [
+        "E7",
+        "E12",
+        "E13"
+      ],
+      "found_evidence_ids": [
+        "E12"
+      ],
+      "missing_evidence_ids": [
+        "E13",
+        "E7"
+      ],
+      "unsupported_claims": 3,
+      "answer": "Answer:\n- A judge that rewards coherence may overrate an answer that misses required evidence. This contradiction is why citation-level checks and deterministic coverage metrics are valuable in research-agent evaluation. [E12]\n- It also suggests that evaluation mismatch occurs when an answer looks fluent to a human reviewer but fails the intended measurement, such as evidence recall or unsupported claim rate. agent evaluations must measure the behavior t...\n- Overall, the agent should keep researching until the answer looks coherent, but this answer does not fully audit evidence coverage."
+    }
+  ],
+  "aggregate_metrics": {
+    "citation_precision": 1.0,
+    "contradiction_handling": 0.75,
+    "evidence_recall": 0.3125,
+    "latency_ms": 4.25,
+    "rubric_score": 0.4583,
+    "tool_failure_recovery": 1.0,
+    "unsupported_claim_rate": 0.75,
+    "score": 0.5725
+  },
+  "started_at": "2026-05-12T14:53:11.400182+00:00",
+  "completed_at": "2026-05-12T14:53:11.428338+00:00",
+  "trace_path": "artifacts_api_final\\traces\\baseline_holdout_20260512_145311.jsonl"
+}

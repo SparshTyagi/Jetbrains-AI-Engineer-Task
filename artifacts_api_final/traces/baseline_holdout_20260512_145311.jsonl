@@ -1,0 +1,18 @@
+{"ts": "2026-05-12T14:53:11.400718+00:00", "event": "evaluation.start", "mode": "baseline", "split": "holdout", "config": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:11.402559+00:00", "event": "agent.task.start", "task_id": "H1", "config": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:11.407482+00:00", "event": "tool.search.success", "task_id": "H1", "attempt": 1, "top_k": 2, "result_ids": ["E2", "E4"]}
+{"ts": "2026-05-12T14:53:11.408671+00:00", "event": "agent.task.end", "task_id": "H1", "config": "baseline_generic_researcher", "used_evidence_ids": ["E2"], "tool_errors": [], "elapsed_ms": 5.58}
+{"ts": "2026-05-12T14:53:11.410146+00:00", "event": "evaluation.task.scored", "task_id": "H1", "score": 0.595, "metrics": {"citation_precision": 1.0, "evidence_recall": 0.25, "unsupported_claim_rate": 0.75, "contradiction_handling": 1.0, "rubric_score": 0.5, "tool_failure_recovery": 1.0, "latency_ms": 5.58}}
+{"ts": "2026-05-12T14:53:11.410673+00:00", "event": "agent.task.start", "task_id": "H2", "config": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:11.412628+00:00", "event": "tool.search.success", "task_id": "H2", "attempt": 1, "top_k": 2, "result_ids": ["E8", "E13"]}
+{"ts": "2026-05-12T14:53:11.413371+00:00", "event": "agent.task.end", "task_id": "H2", "config": "baseline_generic_researcher", "used_evidence_ids": ["E8"], "tool_errors": [], "elapsed_ms": 2.36}
+{"ts": "2026-05-12T14:53:11.414081+00:00", "event": "evaluation.task.scored", "task_id": "H2", "score": 0.5583, "metrics": {"citation_precision": 1.0, "evidence_recall": 0.3333, "unsupported_claim_rate": 0.75, "contradiction_handling": 1.0, "rubric_score": 0.0, "tool_failure_recovery": 1.0, "latency_ms": 2.36}}
+{"ts": "2026-05-12T14:53:11.414500+00:00", "event": "agent.task.start", "task_id": "H3", "config": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:11.418414+00:00", "event": "tool.search.success", "task_id": "H3", "attempt": 1, "top_k": 2, "result_ids": ["E1", "E5"]}
+{"ts": "2026-05-12T14:53:11.421317+00:00", "event": "agent.task.end", "task_id": "H3", "config": "baseline_generic_researcher", "used_evidence_ids": ["E1"], "tool_errors": [], "elapsed_ms": 5.79}
+{"ts": "2026-05-12T14:53:11.422796+00:00", "event": "evaluation.task.scored", "task_id": "H3", "score": 0.6383, "metrics": {"citation_precision": 1.0, "evidence_recall": 0.3333, "unsupported_claim_rate": 0.75, "contradiction_handling": 1.0, "rubric_score": 0.6667, "tool_failure_recovery": 1.0, "latency_ms": 5.79}}
+{"ts": "2026-05-12T14:53:11.423456+00:00", "event": "agent.task.start", "task_id": "H4", "config": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:11.426252+00:00", "event": "tool.search.success", "task_id": "H4", "attempt": 1, "top_k": 2, "result_ids": ["E12", "E7"]}
+{"ts": "2026-05-12T14:53:11.427013+00:00", "event": "agent.task.end", "task_id": "H4", "config": "baseline_generic_researcher", "used_evidence_ids": ["E12"], "tool_errors": [], "elapsed_ms": 3.27}
+{"ts": "2026-05-12T14:53:11.427686+00:00", "event": "evaluation.task.scored", "task_id": "H4", "score": 0.4983, "metrics": {"citation_precision": 1.0, "evidence_recall": 0.3333, "unsupported_claim_rate": 0.75, "contradiction_handling": 0.0, "rubric_score": 0.6667, "tool_failure_recovery": 1.0, "latency_ms": 3.27}}
+{"ts": "2026-05-12T14:53:11.433089+00:00", "event": "evaluation.end", "aggregate": {"citation_precision": 1.0, "contradiction_handling": 0.75, "evidence_recall": 0.3125, "latency_ms": 4.25, "rubric_score": 0.4583, "tool_failure_recovery": 1.0, "unsupported_claim_rate": 0.75, "score": 0.5725}, "output": "artifacts_api_final\\evaluations\\baseline_holdout_20260512_145311.json"}

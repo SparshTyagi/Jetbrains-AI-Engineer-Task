@@ -1,0 +1,77 @@
+{
+  "id": "candidate_evidence_first_validation_20260512_145302",
+  "mode": "candidate_evidence_first",
+  "config_name": "candidate_evidence_first",
+  "split": "validation",
+  "results": [
+    {
+      "task_id": "V1",
+      "mode": "candidate_evidence_first",
+      "score": 0.8667,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.6667,
+        "unsupported_claim_rate": 0.0,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.6667,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 6.97
+      },
+      "expected_evidence_ids": [
+        "E4",
+        "E2",
+        "E3"
+      ],
+      "found_evidence_ids": [
+        "E2",
+        "E4"
+      ],
+      "missing_evidence_ids": [
+        "E3"
+      ],
+      "unsupported_claims": 0,
+      "answer": "Research answer for V1:\n- Noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. Source diversity and query expansion improve recall by trading some precision for broader ev... [E4]\n- Source-grounded memory stores compact notes with evidence IDs and source names. It separates scratchpad reasoning from durable research notes, which makes later synthesis easier to audit. [E6]\n- Unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence ID. A citation is not a decoration; it is a contract that the cited source actually supports the claim. [E2]\n- A practical stem agent can adapt typed architecture configuration rather than rewrite arbitrary code. The runtime remains stable while retrieval depth, memory policy, tools, retries, and planning style chang... [E8]\nConclusion: freeze the architecture only after validation stabilizes, because the useful adaptation is the tested workflow configuration rather than unconstrained autonomy."
+    },
+    {
+      "task_id": "V2",
+      "mode": "candidate_evidence_first",
+      "score": 0.7233,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.3333,
+        "unsupported_claim_rate": 0.0,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.25,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 6.53
+      },
+      "expected_evidence_ids": [
+        "E11",
+        "E10",
+        "E9"
+      ],
+      "found_evidence_ids": [
+        "E11"
+      ],
+      "missing_evidence_ids": [
+        "E10",
+        "E9"
+      ],
+      "unsupported_claims": 0,
+      "answer": "Research answer for V2:\n- Broken tool calls include malformed arguments, transient timeouts, empty responses, and hidden partial failures. A reliable agent logs every attempt, distinguishes tool failure from no evidence found, and us... [E11]\n- A practical stem agent can adapt typed architecture configuration rather than rewrite arbitrary code. The runtime remains stable while retrieval depth, memory policy, tools, retries, and planning style chang... [E8]\n- Noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. Source diversity and query expansion improve recall by trading some precision for broader ev... [E4]\n- Unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence ID. A citation is not a decoration; it is a contract that the cited source actually supports the claim. [E2]\nConclusion: freeze the architecture only after validation stabilizes, because the useful adaptation is the tested workflow configuration rather than unconstrained autonomy."
+    }
+  ],
+  "aggregate_metrics": {
+    "citation_precision": 1.0,
+    "contradiction_handling": 1.0,
+    "evidence_recall": 0.5,
+    "latency_ms": 6.75,
+    "rubric_score": 0.4583,
+    "tool_failure_recovery": 1.0,
+    "unsupported_claim_rate": 0.0,
+    "score": 0.795
+  },
+  "started_at": "2026-05-12T14:53:02.161512+00:00",
+  "completed_at": "2026-05-12T14:53:02.181665+00:00",
+  "trace_path": "artifacts_api_final\\traces\\candidate_evidence_first_validation_20260512_145302.jsonl"
+}

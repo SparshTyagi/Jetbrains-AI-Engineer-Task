@@ -1,0 +1,77 @@
+﻿{
+  "id": "candidate_expanded_retrieval_validation_20260512_145302",
+  "mode": "candidate_expanded_retrieval",
+  "config_name": "candidate_expanded_retrieval",
+  "split": "validation",
+  "results": [
+    {
+      "task_id": "V1",
+      "mode": "candidate_expanded_retrieval",
+      "score": 0.6383,
+      "metrics": {
+        "citation_precision": 1.0,
+        "evidence_recall": 0.3333,
+        "unsupported_claim_rate": 0.75,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.6667,
+        "tool_failure_recovery": 1.0,
+        "latency_ms": 5.88
+      },
+      "expected_evidence_ids": [
+        "E4",
+        "E2",
+        "E3"
+      ],
+      "found_evidence_ids": [
+        "E4"
+      ],
+      "missing_evidence_ids": [
+        "E2",
+        "E3"
+      ],
+      "unsupported_claims": 3,
+      "answer": "Answer:\n- Noisy retrieval often comes from shallow lexical top-k search returning many near-duplicates from the same source. Source diversity and query expansion improve recall by trading some precision for broader ev... [E4]\n- It also suggests that unsupported claims are reduced when every synthesized claim is attached to a retrieved evidence id. a citation is not a decoration; it is a contract that the cited source actually supports the claim.\n- Overall, the agent should keep researching until the answer looks coherent, but this answer does not fully audit evidence coverage."
+    },
+    {
+      "task_id": "V2",
+      "mode": "candidate_expanded_retrieval",
+      "score": 0.32,
+      "metrics": {
+        "citation_precision": 0.0,
+        "evidence_recall": 0.0,
+        "unsupported_claim_rate": 0.0,
+        "contradiction_handling": 1.0,
+        "rubric_score": 0.0,
+        "tool_failure_recovery": 0.0,
+        "latency_ms": 3.45
+      },
+      "expected_evidence_ids": [
+        "E11",
+        "E10",
+        "E9"
+      ],
+      "found_evidence_ids": [],
+      "missing_evidence_ids": [
+        "E10",
+        "E11",
+        "E9"
+      ],
+      "unsupported_claims": 0,
+      "answer": "Retrieval failed before enough evidence was collected. The run is marked incomplete instead of synthesizing from an empty context."
+    }
+  ],
+  "aggregate_metrics": {
+    "citation_precision": 0.5,
+    "contradiction_handling": 1.0,
+    "evidence_recall": 0.1666,
+    "latency_ms": 4.665,
+    "rubric_score": 0.3333,
+    "tool_failure_recovery": 0.5,
+    "unsupported_claim_rate": 0.375,
+    "score": 0.4791
+  },
+  "started_at": "2026-05-12T14:53:02.132792+00:00",
+  "completed_at": "2026-05-12T14:53:02.148231+00:00",
+  "trace_path": "artifacts_api_final\\traces\\candidate_expanded_retrieval_validation_20260512_145302.jsonl"
+}
+

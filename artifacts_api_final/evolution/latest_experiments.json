@@ -1,0 +1,131 @@
+{
+  "domain": "research_agent_failures",
+  "success_threshold": 0.72,
+  "best_config": {
+    "name": "research_failures_specialist",
+    "version": "1.0",
+    "tools": [
+      {
+        "name": "corpus_search",
+        "enabled": true,
+        "retries": 2,
+        "timeout_ms": 3000
+      },
+      {
+        "name": "citation_verifier",
+        "enabled": true,
+        "retries": 0,
+        "timeout_ms": 3000
+      },
+      {
+        "name": "note_memory",
+        "enabled": true,
+        "retries": 0,
+        "timeout_ms": 3000
+      }
+    ],
+    "memory": {
+      "enabled": true,
+      "source_grounded": true,
+      "max_notes": 8,
+      "decay_policy": "latest_verified"
+    },
+    "retrieval": {
+      "strategy": "keyword",
+      "top_k": 6,
+      "source_diversity": true,
+      "max_per_source": 3,
+      "query_expansion": true,
+      "citation_verification": true,
+      "min_score": 0.0
+    },
+    "planner": {
+      "style": "evidence_first",
+      "steps": [
+        "expand_domain_query",
+        "retrieve_diverse_sources",
+        "write_grounded_notes",
+        "verify_citations",
+        "check_contradictions",
+        "synthesize"
+      ],
+      "contradiction_check": true,
+      "evidence_first": true
+    },
+    "eval_metrics": [
+      "citation_precision",
+      "evidence_recall",
+      "unsupported_claim_rate",
+      "contradiction_handling",
+      "rubric_score",
+      "tool_failure_recovery"
+    ],
+    "frozen": true,
+    "notes": [
+      "evidence-first planning",
+      "source diversity for noisy retrieval",
+      "citation verification for unsupported claims",
+      "bounded source-grounded memory",
+      "tool retries with typed failures",
+      "schema validation rollback",
+      "freeze architecture after validation stability",
+      "evaluation mismatch between fluency and evidence support",
+      "llm-mined lessons: evidence-first planning, citation verification, source diversity, query expansion, source-grounded memory, tool retries, typed tool failures, schema validation"
+    ]
+  },
+  "best_validation_score": 0.8102,
+  "frozen": true,
+  "experiments": [
+    {
+      "candidate": "candidate_expanded_retrieval",
+      "status": "evaluated",
+      "score": 0.4791,
+      "aggregate_metrics": {
+        "citation_precision": 0.5,
+        "contradiction_handling": 1.0,
+        "evidence_recall": 0.1666,
+        "latency_ms": 4.665,
+        "rubric_score": 0.3333,
+        "tool_failure_recovery": 0.5,
+        "unsupported_claim_rate": 0.375,
+        "score": 0.4791
+      }
+    },
+    {
+      "candidate": "invalid_probe",
+      "status": "rolled_back",
+      "error": "enabled memory requires max_notes >= 1"
+    },
+    {
+      "candidate": "candidate_evidence_first",
+      "status": "evaluated",
+      "score": 0.795,
+      "aggregate_metrics": {
+        "citation_precision": 1.0,
+        "contradiction_handling": 1.0,
+        "evidence_recall": 0.5,
+        "latency_ms": 6.75,
+        "rubric_score": 0.4583,
+        "tool_failure_recovery": 1.0,
+        "unsupported_claim_rate": 0.0,
+        "score": 0.795
+      }
+    },
+    {
+      "candidate": "research_failures_specialist",
+      "status": "evaluated",
+      "score": 0.8102,
+      "aggregate_metrics": {
+        "citation_precision": 0.8571,
+        "contradiction_handling": 1.0,
+        "evidence_recall": 0.6667,
+        "latency_ms": 6.06,
+        "rubric_score": 0.4583,
+        "tool_failure_recovery": 1.0,
+        "unsupported_claim_rate": 0.0,
+        "score": 0.8102
+      }
+    }
+  ],
+  "trace_path": "artifacts_api_final\\traces\\evolve_20260512_145256.jsonl"
+}

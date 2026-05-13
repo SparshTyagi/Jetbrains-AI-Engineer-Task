@@ -1,0 +1,10 @@
+{"ts": "2026-05-12T14:52:56.536354+00:00", "event": "evolution.bootstrap", "domain": "research_agent_failures", "baseline": "baseline_generic_researcher"}
+{"ts": "2026-05-12T14:53:02.125061+00:00", "event": "evolution.workflow_mining", "lessons": ["evidence-first planning", "source diversity for noisy retrieval", "citation verification for unsupported claims", "bounded source-grounded memory", "tool retries with typed failures", "schema validation rollback", "freeze architecture after validation stability", "evaluation mismatch between fluency and evidence support", "llm-mined lessons: evidence-first planning, citation verification, source diversity, query expansion, source-grounded memory, tool retries, typed tool failures, schema validation"]}
+{"ts": "2026-05-12T14:53:02.127704+00:00", "event": "evolution.config_proposal", "candidate": "candidate_expanded_retrieval", "version": "0.2"}
+{"ts": "2026-05-12T14:53:02.155759+00:00", "event": "evolution.best_updated", "candidate": "candidate_expanded_retrieval", "score": 0.4791}
+{"ts": "2026-05-12T14:53:02.156622+00:00", "event": "evolution.rollback", "candidate_name": "dict_candidate", "error": "enabled memory requires max_notes >= 1"}
+{"ts": "2026-05-12T14:53:02.157353+00:00", "event": "evolution.config_proposal", "candidate": "candidate_evidence_first", "version": "0.3"}
+{"ts": "2026-05-12T14:53:02.187863+00:00", "event": "evolution.best_updated", "candidate": "candidate_evidence_first", "score": 0.795}
+{"ts": "2026-05-12T14:53:02.188598+00:00", "event": "evolution.config_proposal", "candidate": "research_failures_specialist", "version": "1.0"}
+{"ts": "2026-05-12T14:53:02.214859+00:00", "event": "evolution.best_updated", "candidate": "research_failures_specialist", "score": 0.8102}
+{"ts": "2026-05-12T14:53:02.218103+00:00", "event": "evolution.freeze", "config": "research_failures_specialist", "score": 0.8102, "frozen": true, "output": "artifacts_api_final\\frozen_architecture.json"}
